@@ -1,12 +1,34 @@
 import React from "react";
 import Card from "./Card";
+import rigoImage from "../../img/rigo-baby.jpg"
 
 
 export const Body = () => {
 
-
+    const cardData = [
+        {
+            title: "Card 1",
+            description: "This is the first card.",
+            image: rigoImage,
+        },
+        {
+            title: "Card 2",
+            description: "This is the second card.",
+            image: rigoImage,
+        },
+        {
+            title: "Card 3",
+            description: "This is the third card.",
+            image: rigoImage,
+        },
+        {
+            title: "Card 4",
+            description: "This is the fourth card.",
+            image: rigoImage,
+        },
+    ];
     return (
-        <div>
+        <div className="container p-0">
             <div className="jumbotron mt-5">
                 <div className="container d-flex flex-column jumbotron1 mb-2">
                     <h1 className="display-3">Hello, world!</h1>
@@ -26,13 +48,25 @@ export const Body = () => {
                     </div>
                 </div>
             </div>
-            <div>
-          <Card/>  
-          <Card/>  
-          <Card/>  
-          <Card/>  
-          <Card/>  
-        </div>
+            <div className="d-flex">
+                <div className="row"> 
+                {
+                    cardData.map((card, index) => (
+                        <div key={index} className="col-md-3 col-sm-6 mb-4">
+                            <Card
+                                title={card.title}
+                                description={card.description}
+                            />
+
+                        </div>
+
+
+                    ))
+                }
+</div>
+
+
+            </div>
 
         </div>
 

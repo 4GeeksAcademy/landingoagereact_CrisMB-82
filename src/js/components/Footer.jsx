@@ -6,7 +6,7 @@ export const Footer = () => {
     return (
 
         <div>
-<h1> Yo soy el Footer</h1>
+<h3> Proyecto LandingPage </h3>
 
         </div>
     )
